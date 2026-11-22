@@ -1,0 +1,24 @@
+{
+ "version": "3.0.0",
+ "notes": "When a user disconnect from internet so host should see second user left in chat also green dot appear as online on both users once one gets grey then offline, also in chats it texts should like bubble means in a proper text like whatsapp and react on message and reply to specific message option.",
+ "base": "https://raw.githubusercontent.com/YOUR-GITHUB-NAME/weteleporting/main/extension/",
+ "published": "2026-11-22T14:53:12.211Z",
+ "files": {
+  "_metadata/generated_indexed_rulesets/_ruleset1": "dc669ea4f1b888fb85f88b7a843d97b92942f452cd73965f79304da601f0346c",
+  "adblock.js": "50ce31cfe06c16929819c7ab6a8577bae6ebe3ceef2f94b98c6298f5d41351db",
+  "background.js": "57a416b75658a4760d277f58f42bd6790ad23adac85d597f196fa2c76fa1b750",
+  "content.js": "74e2a41be1249abc3f1a62bb1ad8e94e166b739750192bcfe4cb559ee226ff2f",
+  "icons/128.png": "44917e765891bb5c0afb7bfdfef299cedd5c1f0bcca42817bf3c82a35a91ffc4",
+  "icons/16.png": "2ad4215131dd6483f0d9095bf6a7f878599b1b38b4b2636a2c3b305026fe40bf",
+  "icons/48.png": "f956481f86539b79220e2f946cbbb0db1953f79a7e4d24d7e5949030d2838799",
+  "manifest.json": "5ce741ceff3af2bffab15f0a469365b513e423a2d17edf048530c1ace4cbee4c",
+  "offscreen.html": "6274e2c479a2097b8886e679d7db815e46ad8863142f867fbf68cacf86624ef0",
+  "offscreen.js": "e1662c7dae4c7f57bfb4e4c6bd674a75f4af86eaf8715b8ebda7f29927b4fb87",
+  "popup.css": "7fbef075fc69a76ebce6d88e84b25f317eb0baeba0e6e196945398316beb3e5d",
+  "popup.html": "71c0bf2eba0a4e1585e8c3497cc291cf7387192c634aa314e4acb7dbbfd7fe6c",
+  "popup.js": "8390a1dd9c9a5e0f98386e1dbfc187672e3880c98da474b19298d7c7078d9080",
+  "rules.json": "71cd7ebb88649b63335d98a047f732b7e716f32718b30af14a9985432e66e8e7",
+  "themes.js": "676afa5c3c0629bdb91fd377b0ffce3d235ee8fe9c41957f22dddc7b9875c9ac",
+  "yt-main.js": "ec666e9de79cb271a6b5a2881b4ae32c62fe08c2e4eaae59c9311c5c7cbd1484"
+ }
+}
