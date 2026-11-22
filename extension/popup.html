@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><div class="logo">♥</div><div><h1>weteleporting</h1><p>watch together, perfectly in sync</p></div></header>
+  <nav><button id="tabRoom" class="on">Room</button><button id="tabSet">Settings</button></nav>
+
+  <main id="paneRoom">
+    <div class="banner hide" id="updBanner"><span id="updBannerTxt"></span><button id="updBannerBtn">Update</button></div>
+    <div class="err" id="err"></div>
+
+    <section id="home">
+      <label>Your name</label><input id="name" maxlength="24" placeholder="e.g. Aman">
+      <button class="primary" id="create">✨ Create a room</button>
+      <div class="or"><span>or join with a code</span></div>
+      <input id="code" class="big" inputmode="numeric" maxlength="7" placeholder="000 000" autocomplete="off">
+      <button class="ghost" id="join">Join room</button>
+      <a class="link" id="toManual">Can't connect? Use manual mode</a>
+    </section>
+
+    <section id="hostcode" class="hide">
+      <small class="cap">YOUR ROOM CODE</small>
+      <div class="bigcode" id="bigcode">······</div>
+      <button class="primary" id="copyCode">📋 Copy code</button>
+      <p class="hint">Send this 6-digit code to your partner. Waiting for them to join… (valid for 10 minutes)</p>
+      <button class="ghost" id="cancel1">Cancel</button>
+    </section>
+
+    <section id="connecting" class="hide">
+      <div class="spin"></div><p class="hint center">Connecting to your partner…</p>
+      <button class="ghost" id="cancel2">Cancel</button>
+    </section>
+
+    <section id="room" class="hide">
+      <div class="card"><small class="cap">STATUS</small><div class="status" id="status"></div></div>
+      <div class="banner hide" id="mismatch"><span id="mtxt"></span><button id="goto">Go to their page</button></div>
+      <div class="grid">
+        <button id="tchat">💬 Show / hide chat</button><button id="slink">💌 Send this page</button>
+        <button id="resync">🔄 Re-sync now</button><button id="clear">🧹 Clear chat</button>
+        <button id="leave">🚪 Leave room</button><button id="end" class="danger">💔 End room</button>
+      </div>
+      <p class="hint">Alt+Shift+C hides / shows chat. Open the same video, press play, and you teleport.</p>
+    </section>
+
+    <!-- manual mode (backup) -->
+    <section id="mHome" class="hide">
+      <p class="hint">Manual mode needs no matchmaking service. You swap two longer codes by message.</p>
+      <label>Your name</label><input id="mname" maxlength="24" placeholder="e.g. Aman">
+      <button class="primary" id="mCreate">I'll invite my partner</button>
+      <button class="ghost" id="mGoJoin">I have an invite code</button>
+      <a class="link" id="mBack">← Back to 6-digit codes</a>
+    </section>
+    <section id="mHost" class="hide">
+      <div class="step"><b>1</b> Send this invite code to your partner</div>
+      <textarea id="offer" readonly placeholder="Creating…"></textarea>
+      <button class="primary" id="copyOffer">📋 Copy invite code</button>
+      <div class="step"><b>2</b> Paste the reply code they send back</div>
+      <textarea id="reply" placeholder="Paste reply code (starts with WT1-)"></textarea>
+      <button class="ghost" id="cancel3">Cancel</button>
+    </section>
+    <section id="mJoin" class="hide">
+      <div class="step"><b>1</b> Paste the invite code your partner sent</div>
+      <textarea id="invite" placeholder="Paste invite code (starts with WT1-)"></textarea>
+      <button class="ghost" id="mBack2">← Back</button>
+    </section>
+    <section id="mJoined" class="hide">
+      <div class="step"><b>2</b> Send this reply code back to your partner</div>
+      <textarea id="answer" readonly placeholder="Creating…"></textarea>
+      <button class="primary" id="copyAnswer">📋 Copy reply code</button>
+      <p class="hint">You will connect automatically once they paste it.</p>
+      <button class="ghost" id="cancel4">Cancel</button>
+    </section>
+  </main>
+
+  <main id="paneSet" class="hide">
+    <label>Theme <span class="tag">shared with partner</span></label>
+    <div class="sw" id="sw"></div>
+    <label>Chat background <span class="tag">shared</span></label>
+    <div class="chips" id="chips"></div>
+    <div class="row"><span>Soft glow around the screen <span class="tag">shared</span></span><button class="tg" id="tgGlow"></button></div>
+    <hr>
+    <div class="row"><span>🛡 Ad blocker <span class="tag mine">just you</span><small>Blocks ads &amp; skips YouTube ads. Reload open tabs after changing.</small></span><button class="tg" id="tgAd"></button></div>
+    <details><summary>Advanced</summary>
+      <label>Matchmaker address (optional)</label><input id="broker" placeholder="wss://0.peerjs.com/peerjs?key=peerjs">
+      <small class="hint">Leave empty to use the default free PeerJS service.</small>
+    </details>
+    <hr>
+    <label>⬆ Updates</label>
+    <div class="card"><div class="status" id="updStatus">…</div><small class="hint" id="updNotes"></small>
+      <button class="ghost" id="updCheck">🔄 Check now</button>
+      <button class="primary" id="updOpen">Open update manager</button></div>
+    <div class="row"><span>Check for updates automatically<small>Looks for a new version every 15 minutes.</small></span><button class="tg" id="tgAuto"></button></div>
+    <details><summary>Update source (advanced)</summary>
+      <input id="updUrl" placeholder="https://raw.githubusercontent.com/you/weteleporting/main/update.json">
+      <small class="hint">Leave empty to use the address built into this extension.</small></details>
+  </main>
+<script src="config.js"></script><script src="themes.js"></script><script src="updater.js"></script><script src="popup.js"></script></body></html>
